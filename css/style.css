@@ -13,7 +13,7 @@ body {
 p {
   color: hsl(227, 12%, 61%);
   line-height: 1.4rem;
-  width: 33ch;
+  text-align: justify;
 }
 
 button {
@@ -83,6 +83,7 @@ nav ul {
 
 .hero-info p {
   margin-block: 16px;
+  width: 33ch;
 }
 
 .hero-img {
@@ -97,6 +98,50 @@ nav ul {
 
 /*---------*/
 
+/* Manage styles */
+.manage .container {
+  display: flex;
+  margin-block: 32px;
+}
+
+.manage-about {
+  min-width: 50%;
+}
+
+.manage-about h1 {
+  margin-bottom: 20px;
+}
+
+.manage-about p {
+  max-width: 33ch;
+}
+
+.manage-info {
+  min-width: 50%;
+}
+
+.manage-info article {
+  width: max(80%, 350px);
+  margin: 0 auto;
+}
+
+.manage-info span {
+  background-color: hsl(12, 88%, 59%);
+  color: hsl(0, 0%, 98%);
+  padding: 5px 13px 5px 15px;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+.manage-info h4 {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.manage-info p {
+  max-width: 80%;
+  margin-left: 72px;
+}
 
 .attribution {
   font-size: 11px;
