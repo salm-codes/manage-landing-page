@@ -13,6 +13,7 @@ body {
 p {
   color: hsl(227, 12%, 61%);
   line-height: 1.4rem;
+  width: 33ch;
 }
 
 button {
@@ -61,6 +62,41 @@ nav ul {
 }
 
 /* -------------*/
+
+/* Main styles */
+
+/* hero styles */
+
+.hero .container {
+  display: flex;
+}
+
+.hero-info {
+  min-width: 50%;
+}
+
+.hero-info h1 {
+  font-size: 40px;
+  max-width: 19ch;
+  margin-bottom: 20px;
+}
+
+.hero-info p {
+  margin-block: 16px;
+}
+
+.hero-img {
+  min-width: 50%;
+}
+
+.hero-img>img {
+  width: max(80%, 350px);
+  display: block;
+  margin: 0 auto;
+}
+
+/*---------*/
+
 
 .attribution {
   font-size: 11px;
