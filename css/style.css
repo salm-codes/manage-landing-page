@@ -40,6 +40,28 @@ a {
   margin: 0 auto;
 }
 
+/* Header styles */
+
+nav .container {
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo>img {
+  position: relative;
+  top: 4px;
+}
+
+nav ul {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* -------------*/
+
 .attribution {
   font-size: 11px;
   text-align: center;
