@@ -70,6 +70,15 @@ nav ul {
 
 .hero .container {
   display: flex;
+  position: relative;
+}
+
+.container>img {
+  width: max(620px, 60%);
+  position: absolute;
+  top: -300px;
+  right: -250px;
+  z-index: -1;
 }
 
 .hero-info {
@@ -103,6 +112,7 @@ nav ul {
 .manage .container {
   display: flex;
   margin-block: 32px;
+  position: relative;
 }
 
 .manage-about {
@@ -115,6 +125,14 @@ nav ul {
 
 .manage-about p {
   max-width: 33ch;
+}
+
+.manage-about img {
+  position: absolute;
+  width: 600px;
+  top: 180px;
+  left: -360px;
+  z-index: -1;
 }
 
 .manage-info {
@@ -243,11 +261,27 @@ nav ul {
   font-weight: normal;
 }
 
+.cta h2+img {
+  position: absolute;
+  width: 300px;
+  left: 10rem;
+  top: -20px;
+  opacity: 0.1;
+}
+
 .cta button {
   background-color: hsl(0, 0%, 98%);
   color: hsl(12, 88%, 59%);
   justify-self: flex-end;
   margin-right: 8rem;
+}
+
+.cta button+img {
+  position: absolute;
+  width: 300px;
+  right: -140px;
+  bottom: 48px;
+  opacity: 0.1;
 }
 
 /* --------- */
