@@ -117,7 +117,7 @@
       <h1>
         What they’ve said
       </h1>
-      <div class="slide-row showing-1">
+      <div id="slide" class="slide-row showing-1">
         <div class="slide-column slide-column-1">
           <div class="slide-element">
             <img src="./images/avatar-anisha.png" alt="Avatar Anisha">
@@ -130,9 +130,9 @@
             </p>
           </div>
         </div>
+
         <div class="slide-column">
           <div class="slide-element">
-
             <img src="./images/avatar-ali.png" alt="Avatar Ali">
             <h4>
               Ali Bravo
@@ -144,27 +144,39 @@
             </p>
           </div>
         </div>
+
         <div class="slide-column">
-          <img src="./images/avatar-richard.png" alt="Avatar Richard">
-          <h4>
-            Richard Watts
-          </h4>
-          <p>
-            “Manage allows us to provide structure and process. It keeps us organized
-            and focused. I can’t stop recommending them to everyone I talk to!”
-          </p>
+          <div class="slide-element">
+            <img src="./images/avatar-richard.png" alt="Avatar Richard">
+            <h4>
+              Richard Watts
+            </h4>
+            <p>
+              “Manage allows us to provide structure and process. It keeps us organized
+              and focused. I can’t stop recommending them to everyone I talk to!”
+            </p>
+          </div>
         </div>
+
         <div class="slide-column">
-          <img src="./images/avatar-shanai.png" alt="Avatar Shanai">
-          <h4>
-            Shanai Gough
-          </h4>
-          <p>
-            “Their software allows us to track, manage and collaborate on our projects
-            from anywhere. It keeps the whole team in-sync without being intrusive.”
-          </p>
+          <div class="slide-element">
+            <img src="./images/avatar-shanai.png" alt="Avatar Shanai">
+            <h4>
+              Shanai Gough
+            </h4>
+            <p>
+              “Their software allows us to track, manage and collaborate on our projects
+              from anywhere. It keeps the whole team in-sync without being intrusive.”
+            </p>
+          </div>
         </div>
       </div>
+
+      <div class="indicator">
+        <span class="btn active"></span>
+        <span class="btn"></span>
+      </div>
+
       <button>
         Get Started
       </button>
@@ -227,6 +239,7 @@
       </p>
     </div>
   </footer>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>

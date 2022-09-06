@@ -8,6 +8,7 @@ body {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 16px;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 p {
@@ -141,6 +142,85 @@ nav ul {
 .manage-info p {
   max-width: 80%;
   margin-left: 72px;
+}
+
+/*-------------*/
+
+/*Sliders*/
+
+.sliders {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sliders h1 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.sliders button {
+  margin: 0 auto;
+}
+
+.slide-row {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  transition: 0.8s;
+}
+
+.slide-column {
+  width: 33.33%;
+  flex-shrink: 0;
+  padding-right: 40px;
+}
+
+.slide-element {
+  position: relative;
+  padding: 20px;
+  height: 100%;
+  background-color: hsl(0, 0%, 98%);
+}
+
+.slide-element h4 {
+  text-align: center;
+  margin-block: 20px;
+}
+
+.slide-element img {
+  width: 4rem;
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.indicator {
+  margin: 20px auto;
+}
+
+.btn {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin: 4px;
+  border-radius: 15px;
+  background-color: hsl(227, 12%, 61%);
+  cursor: pointer;
+}
+
+.active {
+  width: 45px;
+}
+
+.slide-row.showing-1 .slide-column-1 {
+  margin-left: 0;
+}
+
+.slide-row.showing-2 .slide-column-1 {
+  margin-left: -33%;
 }
 
 .attribution {
