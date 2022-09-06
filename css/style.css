@@ -152,7 +152,7 @@ nav ul {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 48px;
 }
 
 .sliders h1 {
@@ -222,6 +222,35 @@ nav ul {
 .slide-row.showing-2 .slide-column-1 {
   margin-left: -33%;
 }
+
+/* cta styles */
+
+.cta .container {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(12, 88%, 59%);
+  height: 8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta h2 {
+  max-width: 20ch;
+  color: hsl(0, 0%, 98%);
+  margin-left: 8rem;
+  font-weight: normal;
+}
+
+.cta button {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(12, 88%, 59%);
+  justify-self: flex-end;
+  margin-right: 8rem;
+}
+
+/* --------- */
 
 .attribution {
   font-size: 11px;
