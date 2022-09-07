@@ -14,10 +14,9 @@ body {
 p {
   color: hsl(227, 12%, 61%);
   line-height: 1.4rem;
-  text-align: justify;
 }
 
-button {
+.btn {
   background-color: hsl(12, 88%, 59%);
   color: hsl(0, 0%, 98%);
   padding: 10px 20px 10px 20px;
@@ -56,10 +55,16 @@ nav .container {
   top: 4px;
 }
 
-nav ul {
-  width: 50%;
+header nav ul {
   display: flex;
-  justify-content: space-between;
+}
+
+header nav ul li:not(:last-child) {
+  margin-right: 40px;
+}
+
+.hamburger {
+  display: none;
 }
 
 /* -------------*/
@@ -71,9 +76,10 @@ nav ul {
 .hero .container {
   display: flex;
   position: relative;
+  align-items: center;
 }
 
-.container>img {
+.hero .container>img {
   width: max(620px, 60%);
   position: absolute;
   top: -300px;
@@ -82,22 +88,22 @@ nav ul {
 }
 
 .hero-info {
-  min-width: 50%;
+  min-width: 49%;
 }
 
 .hero-info h1 {
-  font-size: 40px;
-  max-width: 19ch;
+  font-size: 3.5rem;
   margin-bottom: 20px;
+  max-width: 20ch;
 }
 
 .hero-info p {
-  margin-block: 16px;
-  width: 33ch;
+  margin-block: 32px;
+  max-width: 33ch;
 }
 
 .hero-img {
-  min-width: 50%;
+  min-width: 51%;
 }
 
 .hero-img>img {
@@ -113,14 +119,17 @@ nav ul {
   display: flex;
   margin-block: 32px;
   position: relative;
+  padding-top: 100px;
 }
 
 .manage-about {
-  min-width: 50%;
+  min-width: 49%;
 }
 
 .manage-about h1 {
   margin-bottom: 20px;
+  font-size: 2rem;
+  width: 70%;
 }
 
 .manage-about p {
@@ -130,13 +139,13 @@ nav ul {
 .manage-about img {
   position: absolute;
   width: 600px;
-  top: 180px;
-  left: -360px;
+  top: 300px;
+  left: -300px;
   z-index: -1;
 }
 
 .manage-info {
-  min-width: 50%;
+  min-width: 51%;
 }
 
 .manage-info article {
@@ -158,7 +167,7 @@ nav ul {
 }
 
 .manage-info p {
-  max-width: 80%;
+  max-width: 85%;
   margin-left: 72px;
 }
 
@@ -169,13 +178,12 @@ nav ul {
 .sliders {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
-  margin-bottom: 48px;
+  margin-block: 72px;
 }
 
 .sliders h1 {
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 48px;
 }
 
 .sliders button {
@@ -192,7 +200,8 @@ nav ul {
 .slide-column {
   width: 33.33%;
   flex-shrink: 0;
-  padding-right: 40px;
+  padding-inline: 40px;
+  transition: margin 300ms linear;
 }
 
 .slide-element {
@@ -219,7 +228,7 @@ nav ul {
   margin: 20px auto;
 }
 
-.btn {
+.ctrl-btn {
   display: inline-block;
   height: 15px;
   width: 15px;
@@ -258,7 +267,7 @@ nav ul {
   max-width: 20ch;
   color: hsl(0, 0%, 98%);
   margin-left: 8rem;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 .cta h2+img {
@@ -301,12 +310,12 @@ footer .container {
   align-items: center;
 }
 
-.container nav {
+footer .container nav {
   min-width: 30%;
   margin-top: 20px;
 }
 
-.container nav ul {
+footer .container nav ul {
   width: 100%;
   list-style: none;
   display: flex;
@@ -316,11 +325,11 @@ footer .container {
   height: 8rem;
 }
 
-.container nav ul li {
+footer .container nav ul li {
   margin-bottom: 10px;
 }
 
-.container nav ul li a {
+footer .container nav ul li a {
   text-decoration: none;
   color: hsl(0, 0%, 90%);
 }

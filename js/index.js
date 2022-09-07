@@ -1,4 +1,4 @@
-var btn = document.getElementsByClassName('btn');
+var btn = document.getElementsByClassName('ctrl-btn');
 
 btn[0].onclick = function () {
   document.getElementById('slide').classList.replace('showing-2', 'showing-1');

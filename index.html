@@ -15,6 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="./css/style.css">
+  <script defer src="./js/index.js"></script>
 </head>
 
 <body>
@@ -24,6 +25,9 @@
         <div class="logo">
           <img src="./images/logo.svg" alt="Manage logo">
         </div>
+        <button class="hamburger">
+          <img src="./images/icon-hamburger.svg" alt="Hamburger icon">
+        </button>
         <ul>
           <li><a href="#">Pricing</a></li>
           <li><a href="#">Product</a></li>
@@ -31,7 +35,7 @@
           <li><a href="#">Careers</a></li>
           <li><a href="#">Community</a></li>
         </ul>
-        <button>Get Started</button>
+        <button class="btn">Get Started</button>
       </div>
     </nav>
   </header>
@@ -47,7 +51,7 @@
             Manage makes it simple for software teams to plan day-to-day
             tasks while keeping the larger team goals in view.
           </p>
-          <button>
+          <button class="btn">
             Get Started
           </button>
         </div>
@@ -175,11 +179,11 @@
       </div>
 
       <div class="indicator">
-        <span class="btn active"></span>
-        <span class="btn"></span>
+        <span class="ctrl-btn active"></span>
+        <span class="ctrl-btn"></span>
       </div>
 
-      <button>
+      <button class="btn">
         Get Started
       </button>
     </section>
@@ -190,7 +194,7 @@
           Simplify how your team works today.
         </h2>
         <img src="./images/bg-tablet-pattern.svg" alt="Tablet pattern">
-        <button>
+        <button class="btn">
           Get Started
         </button>
         <img src="./images/bg-tablet-pattern.svg" alt="Tablet pattern">
@@ -202,7 +206,7 @@
     <div class="container">
       <div class="image-container">
         <div>
-          <img src="./images/logo.svg" alt="Logo">
+          <img class="footer-logo" src="./images/logo-white.svg" alt="Logo">
         </div>
         <div>
           <img src="./images/icon-facebook.svg" alt="facebook icon">
@@ -226,7 +230,7 @@
       <div class="footer-mail-copyright">
         <form action="#">
           <input type="email" name="email" id="email" placeholder="Updates in your inbox...">
-          <button>
+          <button class="btn" style="box-shadow: none;">
             Go
           </button>
         </form>
@@ -243,7 +247,6 @@
       </p>
     </div>
   </footer>
-  <script src="./js/index.js"></script>
 </body>
 
 </html>
