@@ -94,7 +94,6 @@ header nav ul li:not(:last-child) {
 .hero-info h1 {
   font-size: 3.5rem;
   margin-bottom: 20px;
-  max-width: 20ch;
 }
 
 .hero-info p {
@@ -362,4 +361,54 @@ footer .container nav ul li a {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1024px) {
+
+  /* Header style */
+  header nav ul li:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  /* Hero style */
+  .hero-info h1 {
+    font-size: 2rem;
+    max-width: 19ch;
+  }
+
+  .hero .container {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .hero-info {
+    align-self: flex-start;
+  }
+
+  .hero-info p {
+    max-width: 30ch;
+  }
+
+  /* Manage style */
+  .manage-about h1 {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .manage-about p {
+    max-width: 30ch;
+  }
+
+  /* Slider style */
+  .slide-column {
+    width: 50%;
+  }
+
+  .slide-row.showing-1 .slide-column-1 {
+    margin-left: 0;
+  }
+
+  .slide-row.showing-2 .slide-column-1 {
+    margin-left: -100%;
+  }
 }
