@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 16px;
@@ -11,9 +15,18 @@ body {
   overflow-x: hidden;
 }
 
+html.no-scroll,
+html.no-scroll body {
+  overflow: hidden;
+}
+
 p {
   color: hsl(227, 12%, 61%);
   line-height: 1.4rem;
+}
+
+button {
+  cursor: pointer;
 }
 
 .btn {
@@ -24,7 +37,6 @@ p {
   border: none;
   box-shadow: 0 12px 8px -12px hsl(12, 88%, 59%);
   font-weight: 700;
-  cursor: pointer;
 }
 
 ul {
@@ -43,7 +55,7 @@ a {
 
 /* Header styles */
 
-nav .container {
+header .container {
   display: flex;
   height: 100px;
   justify-content: space-between;
@@ -55,11 +67,11 @@ nav .container {
   top: 4px;
 }
 
-header nav ul {
+header ul {
   display: flex;
 }
 
-header nav ul li:not(:last-child) {
+header li:not(:last-child) {
   margin-right: 40px;
 }
 
@@ -79,10 +91,10 @@ header nav ul li:not(:last-child) {
   align-items: center;
 }
 
-.hero .container>img {
+.hero>img {
   width: max(620px, 60%);
   position: absolute;
-  top: -300px;
+  top: -250px;
   right: -250px;
   z-index: -1;
 }
@@ -114,10 +126,14 @@ header nav ul li:not(:last-child) {
 /*---------*/
 
 /* Manage styles */
+
+.manage {
+  position: relative;
+}
+
 .manage .container {
   display: flex;
   margin-block: 32px;
-  position: relative;
   padding-top: 100px;
 }
 
@@ -135,10 +151,10 @@ header nav ul li:not(:last-child) {
   max-width: 33ch;
 }
 
-.manage-about img {
+.manage img {
   position: absolute;
   width: 600px;
-  top: 300px;
+  bottom: -350px;
   left: -300px;
   z-index: -1;
 }
@@ -233,12 +249,17 @@ header nav ul li:not(:last-child) {
   width: 15px;
   margin: 4px;
   border-radius: 15px;
-  background-color: hsl(227, 12%, 61%);
+  border: 1px solid hsl(12, 88%, 59%);
+  background-color: hsl(0, 0%, 98%);
   cursor: pointer;
 }
 
 .active {
-  width: 45px;
+  background-color: hsl(12, 88%, 59%);
+}
+
+.indicator .disable {
+  display: none;
 }
 
 .slide-row.showing-1 .slide-column-1 {
@@ -299,7 +320,7 @@ footer .container {
   display: flex;
   justify-content: space-around;
   background-color: hsl(233, 12%, 13%);
-  height: 10rem;
+  height: 160px;
 }
 
 .image-container {
@@ -319,7 +340,7 @@ footer .container nav ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   flex-wrap: wrap;
   height: 8rem;
 }
@@ -366,7 +387,7 @@ footer .container nav ul li a {
 @media (max-width: 1024px) {
 
   /* Header style */
-  header nav ul li:not(:last-child) {
+  header li:not(:last-child) {
     margin-right: 20px;
   }
 
@@ -391,7 +412,7 @@ footer .container nav ul li a {
 
   /* Manage style */
   .manage-about h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
     width: 100%;
   }
 

@@ -20,14 +20,15 @@
 
 <body>
   <header>
-    <nav>
-      <div class="container">
-        <div class="logo">
-          <img src="./images/logo.svg" alt="Manage logo">
-        </div>
-        <button class="hamburger">
-          <img src="./images/icon-hamburger.svg" alt="Hamburger icon">
-        </button>
+    <div class="container">
+      <div class="logo">
+        <img src="./images/logo.svg" alt="Manage logo">
+      </div>
+      <button class="hamburger">
+        <img src="./images/icon-hamburger.svg" alt="Hamburger icon" class="menu-icon">
+        <img src="./images/icon-close.svg" alt="Hamburger close" class="close-icon">
+      </button>
+      <nav class="nav-list">
         <ul>
           <li><a href="#">Pricing</a></li>
           <li><a href="#">Product</a></li>
@@ -35,13 +36,14 @@
           <li><a href="#">Careers</a></li>
           <li><a href="#">Community</a></li>
         </ul>
-        <button class="btn">Get Started</button>
-      </div>
-    </nav>
+      </nav>
+      <button class="btn">Get Started</button>
+    </div>
   </header>
 
   <main>
     <section class="hero">
+      <img src="./images/bg-tablet-pattern.svg" alt="Tablet pattern">
       <div class="container">
         <div class="hero-info">
           <h1>
@@ -55,7 +57,6 @@
             Get Started
           </button>
         </div>
-        <img src="./images/bg-tablet-pattern.svg" alt="Tablet pattern">
         <div class="hero-img">
           <img src="./images/illustration-intro.svg" alt="Illustration images">
         </div>
@@ -63,6 +64,7 @@
     </section>
 
     <section class="manage">
+      <img src="./images/bg-tablet-pattern.svg" alt="Tablet pattern">
       <div class="container">
         <div class="manage-about">
           <h1>
@@ -73,7 +75,6 @@
             the complexity. Our software is tailor-made for modern digital
             product teams.
           </p>
-          <img src="./images/bg-tablet-pattern.svg" alt="Tablet pattern">
         </div>
         <div class="manage-info">
           <article>
@@ -123,7 +124,7 @@
       <h1>
         What they’ve said
       </h1>
-      <div id="slide" class="slide-row showing-1">
+      <div id="slideRow" class="slide-row showing-1">
         <div class="slide-column slide-column-1">
           <div class="slide-element">
             <img src="./images/avatar-anisha.png" alt="Avatar Anisha">
@@ -179,8 +180,10 @@
       </div>
 
       <div class="indicator">
-        <span class="ctrl-btn active"></span>
-        <span class="ctrl-btn"></span>
+        <button class="ctrl-btn active" data-id="0"></button>
+        <button class="ctrl-btn" data-id="1"></button>
+        <button class="ctrl-btn disable" data-id="2"></button>
+        <button class="ctrl-btn disable" data-id="3"></button>
       </div>
 
       <button class="btn">
@@ -208,7 +211,7 @@
         <div>
           <img class="footer-logo" src="./images/logo-white.svg" alt="Logo">
         </div>
-        <div>
+        <div class="logos">
           <img src="./images/icon-facebook.svg" alt="facebook icon">
           <img src="./images/icon-youtube.svg" alt="Youtube icon">
           <img src="./images/icon-twitter.svg" alt="Instagram icon">

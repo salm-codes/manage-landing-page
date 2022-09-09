@@ -1,15 +1,21 @@
-var btn = document.getElementsByClassName('ctrl-btn');
+const controlButtons = document.querySelectorAll('.ctrl-btn');
+const slideRow = document.getElementById('slideRow');
+const indicator = document.querySelector('.indicator');
 
-btn[0].onclick = function () {
-  document.getElementById('slide').classList.replace('showing-2', 'showing-1');
+controlButtons.forEach(button => {
+  button.addEventListener('click', function () {
+    updateSlide(button);
+    updateControlButtons(button);
+  });
+});
 
-  btn[1].classList.remove('active');
-  btn[0].classList.add('active');
-};
+function updateSlide(button) {
+  const id = Number(button.dataset.id) + 1;
+  slideRow.className = `slide-row showing-${id}`;
+}
 
-btn[1].onclick = function () {
-  document.getElementById('slide').classList.replace('showing-1', 'showing-2');
-
-  btn[0].classList.remove('active');
-  btn[1].classList.add('active');
-};
+function updateControlButtons(button) {
+  const index = Number(button.dataset.id);
+  indicator.querySelector('.ctrl-btn.active').classList.remove('active');
+  controlButtons[index].classList.add('active');
+}
