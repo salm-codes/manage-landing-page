@@ -39,6 +39,11 @@ button {
   font-weight: 700;
 }
 
+.btn:active,
+.btn:hover {
+  opacity: 0.8;
+}
+
 ul {
   list-style: none;
 }
@@ -46,6 +51,10 @@ ul {
 a {
   text-decoration: none;
   color: hsl(233, 12%, 13%);
+}
+
+a:hover {
+  opacity: 0.6;
 }
 
 .container {
@@ -354,6 +363,11 @@ footer li {
 footer a {
   text-decoration: none;
   color: hsl(0, 0%, 90%);
+}
+
+footer a:active,
+footer a:hover {
+  color: hsl(12, 88%, 59%);
 }
 
 .footer-mail-copyright {
@@ -669,11 +683,11 @@ footer a {
     display: flex;
   }
 
-  .container .logos img {
+  footer .logos img {
     width: 2rem;
   }
 
-  .container .logos img:not(:last-child) {
+  footer .logos img:not(:last-child) {
     margin-right: 20px;
   }
 }
