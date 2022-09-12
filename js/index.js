@@ -23,8 +23,44 @@ function updateControlButtons(button) {
   controlButtons[index].classList.add('active');
 }
 
-hamburger.addEventListener('click', function () {
-  this.classList.toggle('showing-close');
+hamburger.addEventListener('click', function (event) {
+  toggleNavlinks();
+  event.stopPropagation();
+});
+
+nav.addEventListener('click', function (event) {
+  event.stopPropagation();
+});
+
+function toggleNavlinks() {
+  hamburger.classList.toggle('showing-close');
   nav.classList.toggle('is-open');
   document.querySelector('html').classList.toggle('no-scroll');
+
+  if (nav.classList.contains('is-open')) {
+    document.body.addEventListener('click', toggleNavlinks, { once: true });
+  }
+}
+
+/*
+hamburger.addEventListener('click', function (event) {
+  toggleNavLinks();
+  event.stopPropagation();
 });
+
+function toggleNavLinks() {
+  if (nav.classList.contains('is-open')) {
+    document.body.removeEventListener('click', toggleNavLinks);
+  } else {
+    document.body.addEventListener('click', toggleNavLinks);
+  }
+
+  hamburger.classList.toggle('showing-close');
+  nav.classList.toggle('is-open');
+  document.querySelector('html').classList.toggle('no-scroll');
+}
+
+nav.addEventListener('click', function (event) {
+  event.stopPropagation();
+});
+*/
