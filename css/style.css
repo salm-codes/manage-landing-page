@@ -95,6 +95,7 @@ header li:not(:last-child) {
 /* hero styles */
 .hero {
   position: relative;
+  margin-top: 50px;
 }
 
 .hero .container {
@@ -145,7 +146,7 @@ header li:not(:last-child) {
 .manage .container {
   display: flex;
   margin-block: 32px;
-  padding-top: 100px;
+  margin-block: 100px;
 }
 
 .manage-about {
@@ -391,14 +392,6 @@ footer a:hover {
 /* ------ */
 /* ------------ */
 
-.attribution p {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
 
 @media (max-width: 1024px) {
 
@@ -511,6 +504,9 @@ footer a:hover {
   }
 
   /* Hero styles */
+  .hero {
+    margin-top: auto;
+  }
 
   .hero>img {
     width: 600px;
